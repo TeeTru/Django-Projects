@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}{% endblock %}</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/layout.css' %}">
+    </head>
+    <body>
+        <div class="page_container">
+            {% include "navbar.html" %}
+            <header class="header-title">
+                <h1>{% block header %}{% endblock %}</h1>
+            </header>
+            {% block content %}{% endblock %}
+        </div>
+
+        <section id="block-footer">
+            <p id="footer-right"><a href="#">Contact</a></p>
+        </section>
+    </body>
+</html>
